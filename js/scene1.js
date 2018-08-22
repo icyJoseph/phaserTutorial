@@ -26,6 +26,12 @@ class Scene1 extends Phaser.Scene {
       var physicsImage = this.physics.add.image(400, 300, "heart");
       physicsImage.setVelocity(Phaser.Math.RND.integerInRange(-100, 100), -300);
     });
+
+    this.input.keyboard.on("keyup", event => {
+      if (event.key === "2") {
+        this.scene.start("Scene2");
+      }
+    });
   }
 
   update(delta) {
