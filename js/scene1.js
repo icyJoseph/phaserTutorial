@@ -6,11 +6,11 @@ class Scene1 extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("GFS", "assets/background.jpg");
+    this.load.image("background", "assets/background.jpg");
   }
 
   create() {
-    this.image = this.add.image(400, 300, "GFS");
+    this.image = this.add.image(400, 300, "background");
 
     this.input.keyboard.on("keyup_D", () => (this.image.x += 10));
 
