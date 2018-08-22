@@ -5,7 +5,13 @@ class Scene1 extends Phaser.Scene {
     });
   }
 
-  preload() {}
-  create() {}
-  upload() {}
+  preload() {
+    this.load.image("GFS", "assets/background.jpg");
+  }
+
+  create() {
+    this.image = this.add.image(400, 300, "GFS");
+  }
+
+  update() {}
 }
