@@ -7,6 +7,7 @@ class Scene1 extends Phaser.Scene {
 
   preload() {
     this.load.image("background", "assets/background.jpg");
+    this.load.image("heart", "assets/heart.png");
   }
 
   create() {
@@ -19,6 +20,11 @@ class Scene1 extends Phaser.Scene {
     this.input.on("pointerdown", event => {
       this.image.x = event.x;
       this.image.y = event.y;
+    });
+
+    this.input.keyboard.on("keyup_P", () => {
+      var physicsImage = this.physics.add.image(400, 300, "heart");
+      physicsImage.setVelocity(Phaser.Math.RND.integerInRange(-100, 100), -300);
     });
   }
 
