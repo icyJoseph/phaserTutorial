@@ -31,6 +31,9 @@ class Scene1 extends Phaser.Scene {
       if (event.key === "2") {
         this.scene.start("Scene2");
       }
+      if (event.key === "3") {
+        this.scene.start("Scene3");
+      }
     });
   }
 
